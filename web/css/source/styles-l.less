@@ -1,0 +1,76 @@
+//
+// BULK HOMME Theme - Desktop Styles
+// _____________________________________________
+
+// Import Magento Blank theme
+@import '../../../Magento/blank/web/css/styles-l.less';
+
+// Import theme styles
+@import '_theme.less';
+
+// Import module-specific styles
+@import '_modules.less';
+
+//
+// Desktop specific overrides (min-width: 768px)
+// ---------------------------------------------
+
+@media only screen and (min-width: @screen-md) {
+    
+    // Header
+    .page-header {
+        .header.content {
+            padding: @spacing-2xl @layout-padding-desktop;
+        }
+    }
+    
+    // Navigation - Show full menu on desktop
+    .navigation {
+        display: block !important;
+        
+        ul {
+            display: flex;
+        }
+    }
+    
+    // Product Grid - More columns on desktop
+    .products.wrapper .products.list {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
+    // Product Page - Side by side layout
+    .product-info-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: @spacing-4xl;
+        
+        .product.media {
+            order: 1;
+        }
+        
+        .product-info-main {
+            order: 2;
+        }
+    }
+    
+    // Checkout - Multi-step layout
+    .checkout-index-index {
+        .opc-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: @spacing-4xl;
+        }
+    }
+}
+
+// Large desktop optimizations (min-width: 1280px)
+@media only screen and (min-width: @screen-xl) {
+    
+    .products.wrapper .products.list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .page-main {
+        padding: 0 @spacing-3xl;
+    }
+}

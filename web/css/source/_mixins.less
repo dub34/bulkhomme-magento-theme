@@ -1,0 +1,291 @@
+//
+// BULK HOMME Theme - Mixins
+// Reusable style mixins for consistent design
+// _____________________________________________
+
+//
+// Button Mixin
+// ---------------------------------------------
+.button-base(@bg-color: @color-primary, @text-color: @color-secondary) {
+    background: @bg-color;
+    color: @text-color;
+    border: none;
+    border-radius: @border-radius-sharp;
+    padding: @spacing-lg @spacing-3xl;
+    font-size: @font-size-body;
+    font-weight: @font-weight-semibold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: @transition-standard;
+    display: inline-block;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: @shadow-medium;
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    
+    &:focus {
+        outline: 2px solid @bg-color;
+        outline-offset: 2px;
+    }
+}
+
+//
+// Card Mixin
+// ---------------------------------------------
+.card-base() {
+    background: @color-secondary;
+    border: 1px solid @color-grey-lightest;
+    border-radius: @border-radius-sharp;
+    overflow: hidden;
+    transition: @transition-standard;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: @shadow-large;
+    }
+}
+
+//
+// Input Mixin
+// ---------------------------------------------
+.input-base() {
+    width: 100%;
+    height: 48px;
+    background: @color-secondary;
+    border: 1px solid @color-grey-lighter;
+    border-radius: @border-radius-sharp;
+    padding: @spacing-base @spacing-lg;
+    font-size: @font-size-body;
+    font-family: @font-family-base;
+    color: @color-primary;
+    transition: @transition-fast;
+    
+    &::placeholder {
+        color: @color-grey-light;
+    }
+    
+    &:focus {
+        border: 2px solid @color-primary;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.mage-error {
+        border: 2px solid @color-error;
+        background: @color-error-bg;
+    }
+}
+
+//
+// Container Mixin
+// ---------------------------------------------
+.container() {
+    max-width: @layout-max-width;
+    margin: 0 auto;
+    padding: 0 @layout-padding-mobile;
+    
+    @media (min-width: @screen-lg) {
+        padding: 0 @layout-padding-desktop;
+    }
+}
+
+//
+// Flex Center Mixin
+// ---------------------------------------------
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//
+// Aspect Ratio Mixin
+// ---------------------------------------------
+.aspect-ratio(@width: 1, @height: 1) {
+    aspect-ratio: @width / @height;
+    
+    // Fallback for older browsers
+    @supports not (aspect-ratio: 1) {
+        position: relative;
+        padding-bottom: percentage(@height / @width);
+        height: 0;
+        
+        > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+//
+// Text Truncate Mixin
+// ---------------------------------------------
+.text-truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-truncate-multiline(@lines: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: @lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//
+// Hover Underline Mixin
+// ---------------------------------------------
+.hover-underline() {
+    text-decoration: none;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: width @transition-fast;
+    }
+    
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+//
+// Shadow Elevation Mixin
+// ---------------------------------------------
+.elevation(@level: 1) {
+    @elevation-1: @shadow-small;
+    @elevation-2: @shadow-medium;
+    @elevation-3: @shadow-large;
+    @elevation-4: @shadow-xlarge;
+    
+    & when (@level = 1) { box-shadow: @elevation-1; }
+    & when (@level = 2) { box-shadow: @elevation-2; }
+    & when (@level = 3) { box-shadow: @elevation-3; }
+    & when (@level = 4) { box-shadow: @elevation-4; }
+}
+
+//
+// Grid Mixin
+// ---------------------------------------------
+.grid(@columns: 3, @gap: @spacing-xl) {
+    display: grid;
+    grid-template-columns: repeat(@columns, 1fr);
+    gap: @gap;
+    
+    @media (max-width: @screen-md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: @screen-sm) {
+        grid-template-columns: 1fr;
+    }
+}
+
+//
+// Responsive Font Size
+// ---------------------------------------------
+.responsive-font(@min-size, @max-size, @min-width: @screen-sm, @max-width: @screen-xl) {
+    font-size: @min-size;
+    
+    @media (min-width: @min-width) {
+        font-size: calc(@min-size + (@max-size - @min-size) * ((100vw - @min-width) / (@max-width - @min-width)));
+    }
+    
+    @media (min-width: @max-width) {
+        font-size: @max-size;
+    }
+}
+
+//
+// Focus Outline Mixin
+// ---------------------------------------------
+.focus-outline(@color: @color-primary) {
+    &:focus {
+        outline: 2px solid @color;
+        outline-offset: 2px;
+    }
+    
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+//
+// Visually Hidden (Accessibility)
+// ---------------------------------------------
+.visually-hidden() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+//
+// Smooth Scrolling
+// ---------------------------------------------
+.smooth-scroll() {
+    scroll-behavior: smooth;
+    
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+//
+// Loading Skeleton
+// ---------------------------------------------
+.skeleton-loading() {
+    background: linear-gradient(
+        90deg,
+        @color-grey-bg 25%,
+        @color-grey-lightest 50%,
+        @color-grey-bg 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+//
+// Print Styles
+// ---------------------------------------------
+.print-hidden() {
+    @media print {
+        display: none !important;
+    }
+}
+
+.print-only() {
+    display: none;
+    
+    @media print {
+        display: block;
+    }
+}

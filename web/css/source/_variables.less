@@ -1,0 +1,350 @@
+//
+// BULK HOMME Theme - Variables
+// Central configuration file for easy customization
+// _____________________________________________
+
+//
+// COLORS
+// ---------------------------------------------
+
+// Primary Palette
+@color-primary: #000000;
+@color-secondary: #FFFFFF;
+
+// Grey Scale (10 shades)
+@color-grey-900: #1A1A1A;      // Charcoal
+@color-grey-850: #2C2C2C;      // Charcoal Light
+@color-grey-800: #333333;      // Dark Grey
+@color-grey-600: #666666;      // Grey
+@color-grey-500: #808080;      // Medium Grey
+@color-grey-400: #999999;      // Light Grey
+@color-grey-300: #CCCCCC;      // Lighter Grey
+@color-grey-200: #E0E0E0;      // Lightest Grey
+@color-grey-100: #EFEFEF;      // BG Light
+@color-grey-50: #F5F5F5;       // BG
+
+// Semantic Colors
+@color-error: #E60000;
+@color-error-dark: #CC0000;
+@color-error-light: #FFF5F5;
+
+@color-success: #00A86B;
+@color-success-light: #F0FFF8;
+
+@color-warning: #FF9500;
+@color-warning-light: #FFF8E1;
+
+@color-info: #0066CC;
+@color-info-light: #E3F2FD;
+
+// Brand Colors (if needed)
+@color-brand-primary: @color-primary;
+@color-brand-accent: @color-grey-800;
+
+//
+// TYPOGRAPHY
+// ---------------------------------------------
+
+// Font Families
+@font-family-primary: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-family-secondary: @font-family-primary;
+@font-family-mono: 'Courier New', Courier, monospace;
+
+@font-family-base: @font-family-primary;
+@font-family-headings: @font-family-primary;
+
+// Font Sizes - Desktop
+@font-size-h1-desktop: 64px;
+@font-size-h2-desktop: 42px;
+@font-size-h3-desktop: 32px;
+@font-size-h4-desktop: 24px;
+@font-size-h5-desktop: 18px;
+@font-size-h6-desktop: 16px;
+
+// Font Sizes - Mobile
+@font-size-h1-mobile: 32px;
+@font-size-h2-mobile: 28px;
+@font-size-h3-mobile: 24px;
+@font-size-h4-mobile: 20px;
+@font-size-h5-mobile: 16px;
+@font-size-h6-mobile: 14px;
+
+// Body Font Sizes
+@font-size-xl: 20px;
+@font-size-lg: 18px;
+@font-size-base: 16px;
+@font-size-sm: 14px;
+@font-size-xs: 12px;
+@font-size-xxs: 10px;
+
+// Font Weights
+@font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-semibold: 600;
+@font-weight-bold: 700;
+@font-weight-extrabold: 800;
+
+// Line Heights
+@line-height-tight: 1.2;
+@line-height-normal: 1.4;
+@line-height-relaxed: 1.6;
+@line-height-loose: 1.8;
+
+// Letter Spacing
+@letter-spacing-tight: -0.02em;
+@letter-spacing-normal: 0;
+@letter-spacing-wide: 0.05em;
+@letter-spacing-wider: 0.1em;
+@letter-spacing-widest: 0.2em;
+
+//
+// SPACING SCALE (8px base)
+// ---------------------------------------------
+@spacing-0: 0;
+@spacing-xs: 2px;
+@spacing-sm: 4px;
+@spacing-md: 8px;
+@spacing-base: 12px;
+@spacing-lg: 16px;
+@spacing-xl: 24px;
+@spacing-2xl: 32px;
+@spacing-3xl: 48px;
+@spacing-4xl: 64px;
+@spacing-5xl: 80px;
+@spacing-6xl: 96px;
+@spacing-7xl: 128px;
+
+//
+// SIZING
+// ---------------------------------------------
+
+// Icon Sizes
+@icon-xs: 12px;
+@icon-sm: 16px;
+@icon-md: 20px;
+@icon-lg: 24px;
+@icon-xl: 32px;
+@icon-2xl: 48px;
+
+// Input Heights
+@input-height-sm: 36px;
+@input-height-md: 48px;
+@input-height-lg: 56px;
+
+// Button Heights
+@button-height-sm: 36px;
+@button-height-md: 48px;
+@button-height-lg: 56px;
+
+//
+// BORDER
+// ---------------------------------------------
+
+// Border Width
+@border-width-thin: 1px;
+@border-width-base: 2px;
+@border-width-thick: 3px;
+
+// Border Radius
+@border-radius-none: 0;
+@border-radius-sm: 2px;
+@border-radius-md: 4px;
+@border-radius-lg: 8px;
+@border-radius-xl: 12px;
+@border-radius-full: 9999px;
+
+// Theme default (sharp corners)
+@border-radius-sharp: @border-radius-none;
+@border-radius-subtle: @border-radius-sm;
+@border-radius-soft: @border-radius-md;
+
+//
+// SHADOWS
+// ---------------------------------------------
+@shadow-none: none;
+@shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+@shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+@shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+@shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+@shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.18);
+@shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.22);
+
+// Focus Shadow
+@shadow-focus: 0 0 0 3px rgba(0, 0, 0, 0.1);
+@shadow-focus-error: 0 0 0 3px rgba(230, 0, 0, 0.1);
+
+//
+// TRANSITIONS
+// ---------------------------------------------
+@transition-duration-fast: 0.15s;
+@transition-duration-base: 0.3s;
+@transition-duration-slow: 0.5s;
+
+@transition-timing-ease: ease;
+@transition-timing-ease-in: ease-in;
+@transition-timing-ease-out: ease-out;
+@transition-timing-ease-in-out: ease-in-out;
+
+@transition-fast: all @transition-duration-fast @transition-timing-ease;
+@transition-base: all @transition-duration-base @transition-timing-ease;
+@transition-slow: all @transition-duration-slow @transition-timing-ease;
+
+//
+// BREAKPOINTS
+// ---------------------------------------------
+@screen-xs: 375px;    // Small mobile
+@screen-sm: 576px;    // Large mobile
+@screen-md: 768px;    // Tablet
+@screen-lg: 1024px;   // Desktop
+@screen-xl: 1280px;   // Large desktop
+@screen-2xl: 1440px;  // Extra large desktop
+@screen-3xl: 1920px;  // Ultra wide
+
+//
+// LAYOUT
+// ---------------------------------------------
+
+// Container Widths
+@container-sm: 640px;
+@container-md: 768px;
+@container-lg: 1024px;
+@container-xl: 1200px;
+@container-2xl: 1440px;
+
+@layout-max-width: @container-xl;
+
+// Padding
+@layout-padding-mobile: 16px;
+@layout-padding-tablet: 24px;
+@layout-padding-desktop: 32px;
+
+// Column Gaps
+@column-gap-sm: 16px;
+@column-gap-md: 24px;
+@column-gap-lg: 32px;
+
+//
+// Z-INDEX SCALE
+// ---------------------------------------------
+@z-index-dropdown: 1000;
+@z-index-sticky: 1020;
+@z-index-fixed: 1030;
+@z-index-modal-backdrop: 1040;
+@z-index-modal: 1050;
+@z-index-popover: 1060;
+@z-index-tooltip: 1070;
+@z-index-notification: 1080;
+
+//
+// HEADER
+// ---------------------------------------------
+@header-height-mobile: 60px;
+@header-height-desktop: 80px;
+@header-background: @color-secondary;
+@header-border-color: @color-grey-200;
+@header-z-index: @z-index-sticky;
+
+//
+// FOOTER
+// ---------------------------------------------
+@footer-background: @color-primary;
+@footer-text-color: @color-secondary;
+@footer-link-color: @color-secondary;
+
+//
+// FORMS
+// ---------------------------------------------
+@form-label-color: @color-primary;
+@form-label-font-weight: @font-weight-medium;
+@form-label-font-size: @font-size-sm;
+
+@form-input-background: @color-secondary;
+@form-input-border-color: @color-grey-300;
+@form-input-border-color-focus: @color-primary;
+@form-input-border-color-error: @color-error;
+@form-input-text-color: @color-primary;
+@form-input-placeholder-color: @color-grey-400;
+
+@form-input-height: @input-height-md;
+@form-input-padding-x: @spacing-lg;
+@form-input-padding-y: @spacing-base;
+
+//
+// BUTTONS
+// ---------------------------------------------
+@button-primary-bg: @color-primary;
+@button-primary-text: @color-secondary;
+@button-primary-hover-bg: @color-grey-850;
+
+@button-secondary-bg: transparent;
+@button-secondary-text: @color-primary;
+@button-secondary-border: @border-width-base solid @color-primary;
+
+@button-padding-x: @spacing-3xl;
+@button-padding-y: @spacing-lg;
+@button-font-weight: @font-weight-semibold;
+@button-text-transform: uppercase;
+@button-letter-spacing: @letter-spacing-wider;
+
+//
+// PRODUCT CARDS
+// ---------------------------------------------
+@product-card-background: @color-secondary;
+@product-card-border-color: @color-grey-200;
+@product-card-hover-shadow: @shadow-lg;
+@product-card-image-bg: @color-grey-50;
+@product-card-padding: @spacing-xl;
+
+//
+// LINKS
+// ---------------------------------------------
+@link-color: @color-primary;
+@link-hover-color: @color-grey-850;
+@link-text-decoration: underline;
+@link-text-underline-offset: 4px;
+
+//
+// ANIMATION
+// ---------------------------------------------
+@animation-hover-translate-y: -2px;
+@animation-hover-translate-y-large: -4px;
+@animation-scale-hover: 1.05;
+
+//
+// OPACITY
+// ---------------------------------------------
+@opacity-disabled: 0.6;
+@opacity-hover: 0.8;
+@opacity-overlay: 0.5;
+
+//
+// ASPECT RATIOS
+// ---------------------------------------------
+@aspect-ratio-square: 1 / 1;
+@aspect-ratio-portrait: 3 / 4;
+@aspect-ratio-landscape: 16 / 9;
+@aspect-ratio-wide: 21 / 9;
+
+//
+// CUSTOM PROPERTIES (CSS Variables)
+// For runtime customization
+// ---------------------------------------------
+
+:root {
+    // Colors
+    --color-primary: @color-primary;
+    --color-secondary: @color-secondary;
+    
+    // Spacing
+    --spacing-base: @spacing-base;
+    --spacing-lg: @spacing-lg;
+    --spacing-xl: @spacing-xl;
+    
+    // Typography
+    --font-size-base: @font-size-base;
+    --font-family-base: @font-family-base;
+    
+    // Layout
+    --container-max-width: @layout-max-width;
+}

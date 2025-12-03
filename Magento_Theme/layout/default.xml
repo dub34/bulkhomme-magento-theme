@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BULK HOMME Theme - Default Layout
+ * 
+ * @category  BulkHomme
+ * @package   BulkHomme_Theme
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Add custom class to body -->
+        <attribute name="class" value="bulkhomme-theme"/>
+        
+        <!-- Remove default blocks we don't need -->
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        
+        <!-- Customize header -->
+        <referenceContainer name="header.container">
+            <container name="header.content" htmlTag="div" htmlClass="header content" after="-">
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="logo" 
+                       template="Magento_Theme::html/header/logo.phtml"
+                       before="-"/>
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="mobile.nav.toggle"
+                       template="Magento_Theme::html/header/mobile-nav.phtml"
+                       after="logo"/>
+            </container>
+        </referenceContainer>
+        
+        <!-- Customize footer -->
+        <referenceContainer name="footer">
+            <container name="footer.content" htmlTag="div" htmlClass="footer content" after="-">
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.links"
+                       template="Magento_Theme::html/footer/links.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" 
+                       name="footer.copyright"
+                       template="Magento_Theme::html/footer/copyright.phtml"/>
+            </container>
+        </referenceContainer>
+    </body>
+</page>
