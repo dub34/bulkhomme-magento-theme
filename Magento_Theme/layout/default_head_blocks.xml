@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * BULK HOMME Theme - Head Blocks Configuration
+ * Подключение CSS файлов темы
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- CSS Variables -->
+        <css src="css/styles/variables.css"/>
+        
+        <!-- Theme Styles -->
+        <css src="css/styles/theme.css"/>
+    </head>
+</page>

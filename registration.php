@@ -4,7 +4,7 @@
  * 
  * @category  BulkHomme
  * @package   BulkHomme_Theme
- * @author    Your Name
+ * @author    Frontend Team
  * @copyright Copyright (c) 2025
  */
 
