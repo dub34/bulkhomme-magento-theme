@@ -1,0 +1,82 @@
+
+/* ============================================
+   Bulk Button (from previous code)
+   ============================================ */
+
+.bulk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    min-width: 300px;
+    padding: 16px 32px;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 3px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.bulk-btn::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 0;
+    height: calc(100% + 6px);
+    background: var(--color-secondary);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.bulk-btn:hover::before {
+    width: calc(100% + 6px);
+}
+
+.bulk-btn > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bulk-btn__arrow {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.bulk-btn:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.bulk-btn:hover .bulk-btn__arrow {
+    transform: translateX(6px);
+}
+
+@media (max-width: 768px) {
+    .bulk-btn {
+        min-width: 280px;
+        padding: 14px 28px;
+        font-size: 12px;
+        gap: 24px;
+    }
+
+    .bulk-btn__arrow {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bulk-btn {
+        min-width: 100%;
+        padding: 12px 24px;
+    }
+}

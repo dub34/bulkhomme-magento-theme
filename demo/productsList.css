@@ -1,0 +1,106 @@
+/* ============================================
+   Products Section
+   ============================================ */
+
+.products-section {
+    padding: 96px 0;
+    background: var(--color-secondary);
+}
+
+.products-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header */
+.products-section__header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.products-section__title {
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.products-section__tagline {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 0.1em;
+    color: var(--color-grey-600);
+}
+
+/* Intro Text */
+.products-section__intro {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.products-section__intro p {
+    font-size: clamp(16px, 2vw, 36px);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-primary);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .products-section {
+        padding: 80px 0;
+    }
+
+    .products-section__header {
+        margin-bottom: 64px;
+    }
+
+    .products-section__intro {
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        padding: 64px 0;
+    }
+
+    .products-section__header {
+        margin-bottom: 48px;
+    }
+
+    .products-section__title {
+        margin-bottom: 20px;
+    }
+
+    .products-section__intro {
+        margin-bottom: 48px;
+    }
+
+    .products-section__intro p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-section {
+        padding: 48px 0;
+    }
+
+    .products-section__container {
+        padding: 0 16px;
+    }
+
+    .products-section__header {
+        margin-bottom: 40px;
+    }
+
+    .products-section__intro {
+        margin-bottom: 40px;
+    }
+}
